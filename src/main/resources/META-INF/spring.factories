@@ -1,0 +1,8 @@
+#注册中心client
+com.boom.discovry.DiscoveryWrapper=\
+  com.boom.discovry.impl.EurekaDiscovery,\
+  com.boom.discovry.impl.NacosDiscovery
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.boom.discovry.MultiDiscoveryAutoConfiguration,\
+  com.boom.ribbon.MultiDiscoveryRibbonAutoConfiguration

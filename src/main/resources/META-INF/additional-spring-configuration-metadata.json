@@ -1,0 +1,64 @@
+{
+  "properties": [
+    {
+      "defaultValue": false,
+      "name": "discovery.multi.enabled",
+      "description": "是否开启多注册中心.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "defaultValue": false,
+      "name": "discovery.eureka.enabled",
+      "description": "是否启用eureka注册中心.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "defaultValue": "1",
+      "name": "discovery.eureka.priority",
+      "description": "获取实例时,从eureka获取的优先级,值越大优先级越高.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "defaultValue": false,
+      "name": "discovery.eureka.register",
+      "description": "是否注册自身到eureka远端.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "defaultValue": 30,
+      "name": "discovery.eureka.refresh-interval",
+      "description": "eureka本地实例缓存列表刷新间隔(秒).",
+      "type": "java.lang.Integer"
+    },
+    {
+      "defaultValue": "",
+      "name": "discovery.eureka.address",
+      "description": "eureka注册中心地址.",
+      "type": "java.lang.String"
+    },
+    {
+      "defaultValue": false,
+      "name": "discovery.nacos.enabled",
+      "description": "是否启用nacos注册中心.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "defaultValue": "1",
+      "name": "discovery.nacos.priority",
+      "description": "获取实例时,从nacos获取的优先级,值越大优先级越高.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "defaultValue": false,
+      "name": "discovery.nacos.register",
+      "description": "是否注册自身到nacos远端.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "defaultValue": "",
+      "name": "discovery.nacos.address",
+      "description": "nacos注册中心地址.",
+      "type": "java.lang.String"
+    }
+  ]
+}
