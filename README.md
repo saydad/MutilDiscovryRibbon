@@ -1,13 +1,13 @@
 # 多注册中心框架
-###目的
+### 目的
 从eureka注册中心平滑迁移，从而解决eureka上下线痛点
 
-###功能
+### 功能
 1. 集成eureka与nacos client
 2. 注册: 支持同时向多个注册中心注册本机
 3. 获取实例列表: 支持实时切换注册中心进行获取
 
-###目录结构
+### 目录结构
 ```text
 .
 ├── MultiDiscoveryManager.java 多个注册中心client注册、销毁、实例列表获取封装
@@ -35,11 +35,11 @@
     └── PropertyUtil.java 配置文件读取属性工具类
 
 ```
-###核心思想
+### 核心思想
 1. 关注各个注册中心client的注册、订阅、关闭的核心能力，同时各个注册中心client实现时都做了cache所以封装时不需要再封装一层cache
 2. 自定义loadBalanceRule，绕过ribbon的cache
 3. 利用spring的spi机制，在spring.factories中定义集成的client
-###启动对比
+### 启动对比
 ![启动时间](docs/启动时间.png)
 11:13:23时应用启动
 -------------------------------
@@ -48,7 +48,7 @@ nacos的变更几乎实时
 -------------------------------
 ![eureka变更时间](docs/eureka启动变更.png)
 eureka有7秒的延迟
-###关闭对比
+### 关闭对比
 ![启动时间](docs/取消注册.png)
 nacos 11:17:16取消注册本机、eureka 11:17:22取消注册本机
 -------------------------------
@@ -58,7 +58,7 @@ nacos的变更几乎实时
 ![eureka变更时间](docs/eureka下线.png)
 eureka有7秒的延迟
 -------------------------------
-###配合feign使用
+### 配合feign使用
 ```xml
 <dependency>
     <groupId>org.springframework.cloud</groupId>
@@ -104,7 +104,7 @@ discovery:
     priority: 2
     register: false
 ```
-###单纯注册使用
+### 单纯注册使用
 ```xml
 <dependency>
     <groupId>com.boom</groupId>
@@ -135,7 +135,7 @@ discovery:
     priority: 2
     register: true
 ```
-###测试代码
+### 测试代码
 ```java
 import java.util.Collections;
 import java.util.List;
@@ -202,7 +202,7 @@ public class TestController {
     }
 }
 ```
-###测试脚本
+### 测试脚本
 ```shell
 #!/bin/bash
 while true
